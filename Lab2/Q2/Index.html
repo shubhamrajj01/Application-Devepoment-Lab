@@ -4,9 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f3f4f6;
+        }
+
+        h1 {
+            color: #333;
+            margin: 10px 0;
+            font-size: 28px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            font-size: 26px;
+            color: white;
+            background-color: #4CAF50;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        td a:hover {
+            color: #357a38;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                width: 95%;
+            }
+
+            th {
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            td {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <table style="margin: auto;" border="1" cellspacing="0" cellpadding="25">
+    <h1>Shubham Raj</h1>
+    <h1>Roll No: 22052857</h1>
+    <table>
         <tr>
             <th>Grade Report</th>
         </tr>
@@ -30,7 +115,7 @@
                 <a href="./Sem4.html">Semester 4 Report</a>
             </td>
         </tr>
-        
     </table>
+    <footer>&copy; 2025 Shubham Raj. All rights reserved.</footer>
 </body>
 </html>

@@ -3,17 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        h1 {
+            margin: 10px 0;
+            color: #4CAF50;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            text-align: center;
+            padding: 15px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        th a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        th:hover {
+            background-color: #357a38;
+            transform: scale(1.05);
+        }
+
+        tr:nth-child(even) th {
+            background-color: #66BB6A;
+        }
+
+        tr:nth-child(even) th:hover {
+            background-color: #4CAF50;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                width: 95%;
+            }
+
+            th {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <table style="margin: auto;" border="1" cellspacing="0" cellpadding="25">
+    <h1>Shubham Raj</h1>
+    <h1>Roll Number: 22052857</h1>
+    <table>
         <tr>
-            <th><a href="./content.html#page1"> Page1</a></th>
-            <th><a href="./content.html#page2"> Page2</a></th>
+            <th><a href="./content.html#page1">Page 1</a></th>
+            <th><a href="./content.html#page2">Page 2</a></th>
         </tr>
         <tr>
-            <th><a href="./content.html#page3"> Page3</a></th>
-            <th><a href="./content.html#page4"> Page4</a></th>
+            <th><a href="./content.html#page3">Page 3</a></th>
+            <th><a href="./content.html#page4">Page 4</a></th>
         </tr>
     </table>
 </body>

@@ -3,66 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Page</title>
+    <title>Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #4CAF50;
+            font-size: 22px;
+        }
+
+        section p {
+            font-size: 16px;
+            margin: 10px 0 20px;
+        }
+
+        section a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        section a:hover {
+            color: #357a38;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            section p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- This is my page 1 content -->
-    <a name="page1"></a>
-    This is my page 1 content:
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque excepturi, incidunt quis cum at nostrum sit quos nulla fuga dolore non assumenda explicabo esse ipsa quaerat molestiae hic nisi! Reprehenderit.
-    Ab pariatur a officiis nobis quidem ipsum rerum asperiores optio obcaecati nihil vero explicabo quam voluptates doloremque fugiat et, architecto maxime voluptatum! Magni facere non voluptas quas praesentium! Earum, iste?
-    Consequuntur, voluptates aliquam. Aspernatur molestias consequatur saepe non asperiores inventore rerum est voluptate sit vero laudantium vitae at impedit, eaque odit, necessitatibus tenetur maxime officia soluta, ab officiis quisquam sequi?
-    Hic minima doloribus, ut sunt molestias reprehenderit praesentium dolorem expedita deleniti cupiditate temporibus modi aliquid perferendis nulla rem sequi inventore error illo. Voluptatibus saepe rerum dolor quae consequatur ut molestiae.
-    Reprehenderit modi animi tempora! Tempora, laboriosam explicabo corporis qui libero quos nesciunt recusandae architecto quis provident eos nobis molestiae ipsam ea cum at eaque veniam corrupti dolor aliquid dolores! Aperiam!
-    Dolorem blanditiis quia debitis aperiam sapiente ipsum adipisci quis quaerat ab corrupti labore quasi repudiandae, alias vel deserunt velit laborum beatae accusamus voluptates ducimus consectetur fugit assumenda veritatis! Reprehenderit, voluptas!
-    Totam quisquam, ipsa dignissimos, nihil distinctio, maiores natus dolore dolor exercitationem temporibus animi consequuntur molestiae ratione iusto harum ea fugit sed. Nihil obcaecati error quae nam vitae, eveniet saepe ad.
-    Fuga reprehenderit nisi iusto accusamus dolorem. Officia eius eum facilis doloribus nihil explicabo laudantium, libero, iure recusandae ratione voluptatibus aliquid atque sit voluptates? Velit aut qui ipsam quidem ullam beatae!
-    Ipsam suscipit aliquam, molestiae ea quis quaerat exercitationem quod praesentium error necessitatibus tempore libero beatae nihil sequi voluptatum non ad? Sit quisquam nam quam nesciunt blanditiis facere, natus dignissimos totam?
-    Sint, consequatur! Quod quas, expedita doloremque dignissimos sapiente reprehenderit ad incidunt? Sapiente impedit laudantium asperiores quibusdam mollitia cum recusandae? Repellendus dicta, vel nisi quas soluta autem quod laudantium repellat pariatur?
-    <br><br>
-
-    <!-- This is my page 2 content -->
-    <a name="page2"></a>
-    This is my page 2 content:
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque excepturi, incidunt quis cum at nostrum sit quos nulla fuga dolore non assumenda explicabo esse ipsa quaerat molestiae hic nisi! Reprehenderit.
-    Ab pariatur a officiis nobis quidem ipsum rerum asperiores optio obcaecati nihil vero explicabo quam voluptates doloremque fugiat et, architecto maxime voluptatum! Magni facere non voluptas quas praesentium! Earum, iste?
-    Consequuntur, voluptates aliquam. Aspernatur molestias consequatur saepe non asperiores inventore rerum est voluptate sit vero laudantium vitae at impedit, eaque odit, necessitatibus tenetur maxime officia soluta, ab officiis quisquam sequi?
-    Hic minima doloribus, ut sunt molestias reprehenderit praesentium dolorem expedita deleniti cupiditate temporibus modi aliquid perferendis nulla rem sequi inventore error illo. Voluptatibus saepe rerum dolor quae consequatur ut molestiae.
-    Reprehenderit modi animi tempora! Tempora, laboriosam explicabo corporis qui libero quos nesciunt recusandae architecto quis provident eos nobis molestiae ipsam ea cum at eaque veniam corrupti dolor aliquid dolores! Aperiam!
-    Dolorem blanditiis quia debitis aperiam sapiente ipsum adipisci quis quaerat ab corrupti labore quasi repudiandae, alias vel deserunt velit laborum beatae accusamus voluptates ducimus consectetur fugit assumenda veritatis! Reprehenderit, voluptas!
-    Totam quisquam, ipsa dignissimos, nihil distinctio, maiores natus dolore dolor exercitationem temporibus animi consequuntur molestiae ratione iusto harum ea fugit sed. Nihil obcaecati error quae nam vitae, eveniet saepe ad.
-    Fuga reprehenderit nisi iusto accusamus dolorem. Officia eius eum facilis doloribus nihil explicabo laudantium, libero, iure recusandae ratione voluptatibus aliquid atque sit voluptates? Velit aut qui ipsam quidem ullam beatae!
-    Ipsam suscipit aliquam, molestiae ea quis quaerat exercitationem quod praesentium error necessitatibus tempore libero beatae nihil sequi voluptatum non ad? Sit quisquam nam quam nesciunt blanditiis facere, natus dignissimos totam?
-    Sint, consequatur! Quod quas, expedita doloremque dignissimos sapiente reprehenderit ad incidunt? Sapiente impedit laudantium asperiores quibusdam mollitia cum recusandae? Repellendus dicta, vel nisi quas soluta autem quod laudantium repellat pariatur?
-    <br><br>
-
-    <!-- This is my page 3 content -->
-    <a name="page3"></a>
-    This is my page 3 content:
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque excepturi, incidunt quis cum at nostrum sit quos nulla fuga dolore non assumenda explicabo esse ipsa quaerat molestiae hic nisi! Reprehenderit.
-    Ab pariatur a officiis nobis quidem ipsum rerum asperiores optio obcaecati nihil vero explicabo quam voluptates doloremque fugiat et, architecto maxime voluptatum! Magni facere non voluptas quas praesentium! Earum, iste?
-    Consequuntur, voluptates aliquam. Aspernatur molestias consequatur saepe non asperiores inventore rerum est voluptate sit vero laudantium vitae at impedit, eaque odit, necessitatibus tenetur maxime officia soluta, ab officiis quisquam sequi?
-    Hic minima doloribus, ut sunt molestias reprehenderit praesentium dolorem expedita deleniti cupiditate temporibus modi aliquid perferendis nulla rem sequi inventore error illo. Voluptatibus saepe rerum dolor quae consequatur ut molestiae.
-    Reprehenderit modi animi tempora! Tempora, laboriosam explicabo corporis qui libero quos nesciunt recusandae architecto quis provident eos nobis molestiae ipsam ea cum at eaque veniam corrupti dolor aliquid dolores! Aperiam!
-    Dolorem blanditiis quia debitis aperiam sapiente ipsum adipisci quis quaerat ab corrupti labore quasi repudiandae, alias vel deserunt velit laborum beatae accusamus voluptates ducimus consectetur fugit assumenda veritatis! Reprehenderit, voluptas!
-    Totam quisquam, ipsa dignissimos, nihil distinctio, maiores natus dolore dolor exercitationem temporibus animi consequuntur molestiae ratione iusto harum ea fugit sed. Nihil obcaecati error quae nam vitae, eveniet saepe ad.
-    Fuga reprehenderit nisi iusto accusamus dolorem. Officia eius eum facilis doloribus nihil explicabo laudantium, libero, iure recusandae ratione voluptatibus aliquid atque sit voluptates? Velit aut qui ipsam quidem ullam beatae!
-    Ipsam suscipit aliquam, molestiae ea quis quaerat exercitationem quod praesentium error necessitatibus tempore libero beatae nihil sequi voluptatum non ad? Sit quisquam nam quam nesciunt blanditiis facere, natus dignissimos totam?
-    Sint, consequatur! Quod quas, expedita doloremque dignissimos sapiente reprehenderit ad incidunt? Sapiente impedit laudantium asperiores quibusdam mollitia cum recusandae? Repellendus dicta, vel nisi quas soluta autem quod laudantium repellat pariatur?
-    <br><br>
-
-    <!-- This is my page 4 content -->
-    <a name="page4"></a>
-    This is my page 4 content:
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque excepturi, incidunt quis cum at nostrum sit quos nulla fuga dolore non assumenda explicabo esse ipsa quaerat molestiae hic nisi! Reprehenderit.
-    Ab pariatur a officiis nobis quidem ipsum rerum asperiores optio obcaecati nihil vero explicabo quam voluptates doloremque fugiat et, architecto maxime voluptatum! Magni facere non voluptas quas praesentium! Earum, iste?
-    Consequuntur, voluptates aliquam. Aspernatur molestias consequatur saepe non asperiores inventore rerum est voluptate sit vero laudantium vitae at impedit, eaque odit, necessitatibus tenetur maxime officia soluta, ab officiis quisquam sequi?
-    Hic minima doloribus, ut sunt molestias reprehenderit praesentium dolorem expedita deleniti cupiditate temporibus modi aliquid perferendis nulla rem sequi inventore error illo. Voluptatibus saepe rerum dolor quae consequatur ut molestiae.
-    Reprehenderit modi animi tempora! Tempora, laboriosam explicabo corporis qui libero quos nesciunt recusandae architecto quis provident eos nobis molestiae ipsam ea cum at eaque veniam corrupti dolor aliquid dolores! Aperiam!
-    Dolorem blanditiis quia debitis aperiam sapiente ipsum adipisci quis quaerat ab corrupti labore quasi repudiandae, alias vel deserunt velit laborum beatae accusamus voluptates ducimus consectetur fugit assumenda veritatis! Reprehenderit, voluptas!
-    Totam quisquam, ipsa dignissimos, nihil distinctio, maiores natus dolore dolor exercitationem temporibus animi consequuntur molestiae ratione iusto harum ea fugit sed. Nihil obcaecati error quae nam vitae, eveniet saepe ad.
-    Fuga reprehenderit nisi iusto accusamus dolorem. Officia eius eum facilis doloribus nihil explicabo laudantium, libero, iure recusandae ratione voluptatibus aliquid atque sit voluptates? Velit aut qui ipsam quidem ullam beatae!
-    Ipsam suscipit aliquam, molestiae ea quis quaerat exercitationem quod praesentium error necessitatibus tempore libero beatae nihil sequi voluptatum non ad? Sit quisquam nam quam nesciunt blanditiis facere, natus dignissimos totam?
-    Sint, consequatur! Quod quas, expedita doloremque dignissimos sapiente reprehenderit ad incidunt? Sapiente impedit laudantium asperiores quibusdam mollitia cum recusandae? Repellendus dicta, vel nisi quas soluta autem quod laudantium repellat pariatur?
+    <header>
+        <h1>Shubham Raj</h1>
+        <p>Roll Number: 22052857</p>
+    </header>
+    <main>
+        <section id="page1">
+            <h2>Page 1</h2>
+            <p>This is the content for Page 1. Add detailed information here as required.</p>
+            <a href="#top">Back to Top</a>
+        </section>
+        <section id="page2">
+            <h2>Page 2</h2>
+            <p>This is the content for Page 2. Include images, text, or any other resources here.</p>
+            <a href="#top">Back to Top</a>
+        </section>
+        <section id="page3">
+            <h2>Page 3</h2>
+            <p>This is the content for Page 3. Use this section to expand on your topics.</p>
+            <a href="#top">Back to Top</a>
+        </section>
+        <section id="page4">
+            <h2>Page 4</h2>
+            <p>This is the content for Page 4. Tailor this section according to your needs.</p>
+            <a href="#top">Back to Top</a>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Shubham Raj. All rights reserved.
+    </footer>
 </body>
 </html>

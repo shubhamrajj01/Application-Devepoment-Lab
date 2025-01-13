@@ -3,25 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Report - Semester 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: #357a38;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 15px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            color: #555;
+        }
+
+        td[colspan="4"] {
+            background-color: #f3f3f3;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                width: 95%;
+            }
+
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="./Intex.html" >Back</a>
-    <table style="margin: auto;" border="1" cellspacing="0"   cellpadding="20">
+    <a href="Index.html">Back</a>
+    <h1>Shubham Raj</h1>
+    <h1>22052857</h1>
+    <table>
         <tr>
             <th rowspan="2">S.No</th>
-            <th rowspan="2">Subject name</th>
+            <th rowspan="2">Subject Name</th>
             <th colspan="2">Marks</th>
             <th rowspan="2">Total</th>
             <th rowspan="2">Grade</th>
         </tr>
         <tr>
             <th>Internal</th>
-            <th>End sem</th>
+            <th>End Sem</th>
         </tr>
         <tr>
             <td>1</td>
-            <td>Physics</td>
+            <td>Differential Calculus</td>
             <td>48</td>
             <td>42</td>
             <td>90</td>
@@ -29,7 +116,7 @@
         </tr>
         <tr>
             <td>2</td>
-            <td>Biology</td>
+            <td>Chemistry</td>
             <td>44</td>
             <td>38</td>
             <td>82</td>
@@ -37,7 +124,7 @@
         </tr>
         <tr>
             <td>3</td>
-            <td>TR & FR</td>
+            <td>Basic Electronics</td>
             <td>40</td>
             <td>38</td>
             <td>78</td>
@@ -45,7 +132,7 @@
         </tr>
         <tr>
             <td>4</td>
-            <td>C-Programming</td>
+            <td>CEP</td>
             <td>48</td>
             <td>44</td>
             <td>92</td>
@@ -53,7 +140,7 @@
         </tr>
         <tr>
             <td>5</td>
-            <td>Physics Lab</td>
+            <td>Workshop</td>
             <td>48</td>
             <td>48</td>
             <td>96</td>
@@ -61,7 +148,7 @@
         </tr>
         <tr>
             <td>6</td>
-            <td>Engineering Graphics</td>
+            <td>Chemistry Lab</td>
             <td>45</td>
             <td>40</td>
             <td>85</td>
@@ -70,7 +157,7 @@
         <tr>
             <td colspan="4"></td>
             <td>SGPA</td>
-            <td>9.0</td>
+            <td>9.4</td>
         </tr>
     </table>
 </body>
