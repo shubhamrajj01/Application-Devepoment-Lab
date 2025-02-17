@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements Count</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .bothForm {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 300px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], 
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .checkbox-group {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        input[type="button"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="button"]:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 650px) {
+            .bothForm {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script>
+        function f1(formId) {
+            let form = document.getElementById(formId);
+            let totalElements = form.elements.length;
+            let elementNames = [];
+
+            for (let i = 0; i < totalElements; i++) {
+                elementNames.push(form.elements[i].name || `Unnamed Element ${i + 1}`);
+            }
+
+            alert(`Form ID: ${formId}\nTotal Elements: ${totalElements}\nElement Names: ${elementNames.join(", ")}`);
+        }
+    </script>
+</head>
+<body>
+    <h2>Shubham Raj</h2>
+    <h2>22052857</h2>
+
+    <div class="bothForm">
+        <div>
+            <h2>Form 1</h2>
+            <form id="form1" action="./1.html" method="get">
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+
+                <label for="pass">Password</label>
+                <input type="password" name="pass" required>
+
+                <input type="button" name="button1" value="Click" onclick="f1('form1')">
+            </form>
+        </div>
+
+        <div>
+            <h2>Form 2</h2>
+            <form id="form2">
+                <h4>Subjects</h4>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="subject1" value="Physics">
+                        Physics
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="subject2" value="Chemistry">
+                        Chemistry
+                    </label>
+                </div>
+
+                <h4>Courses</h4>
+                <select name="course">
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="M.Tech">M.Tech</option>
+                </select> 
+
+                <input type="button" name="button2" value="Click" onclick="f1('form2')">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

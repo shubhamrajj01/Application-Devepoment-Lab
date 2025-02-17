@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="radio"], input[type="checkbox"] {
+            margin-top: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            margin-right: 10px;
+            
+        }
+
+        .button-group {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 48%;
+        }
+
+        input[type="reset"] {
+            background: #dc3545;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background: #c82333;
+        }
+    </style>
+    <script>
+        function onSubmit(event) {
+            event.preventDefault();
+
+            let form = document.getElementById("myForm");
+
+            let name = form.elements["name"].value;
+            let course = form.elements["course"].value;
+            let hobbies = [];
+
+            document.querySelectorAll('input[name="hobby"]:checked').forEach((checkbox) => {
+                hobbies.push(checkbox.value);
+            });
+
+            if (!name) {
+                alert("Please enter your name.");
+                return;
+            }
+
+            if (!course) {
+                alert("Please select a course.");
+                return;
+            }
+
+            alert(
+                `Name: ${name}\nCourse: ${course}\nHobbies: ${hobbies.length > 0 ? hobbies.join(", ") : "None"}`
+            );
+        }
+
+        function onReset() {
+            document.getElementById("myForm").reset();
+        }
+    </script>
+</head>
+<body>
+    <h2>Shubham Raj</h2>
+    <h2>22052857</h2>
+    <h2>Form Handling</h2>
+    <form id="myForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label>Courses</label>
+        <div class="radio-group">
+            <input type="radio" id="btech" name="course" value="B.Tech">
+            <label for="btech">B.Tech</label>
+
+            <input type="radio" id="mtech" name="course" value="M.Tech">
+            <label for="mtech">M.Tech</label>
+        </div>
+
+        <label>Hobbies</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="singing" name="hobby" value="Singing">
+            <label for="singing">Singing</label>
+
+            <input type="checkbox" id="dancing" name="hobby" value="Dancing">
+            <label for="dancing">Dancing</label>
+
+            <input type="checkbox" id="playing" name="hobby" value="Playing">
+            <label for="playing">Playing</label>
+        </div>
+
+        <div class="button-group">
+            <input type="reset" value="Reset" onclick="onReset()">
+            <input type="submit" value="Submit" onclick="onSubmit(event)">
+        </div>
+    </form>
+</body>
+</html>

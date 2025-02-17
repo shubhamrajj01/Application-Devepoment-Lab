@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 320px;
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        input[type="submit"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+    <script>
+        function onSubmit(event) {
+            event.preventDefault(); // Prevents form submission if validation fails
+
+            let password = document.getElementById("pass").value;
+            let confirmPassword = document.getElementById("confpass").value;
+            let errorMessage = document.getElementById("error-message");
+
+            if (password.includes(" ")) {
+                errorMessage.textContent = "❌ Password cannot contain spaces.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+            if (password.length < 6) {
+                errorMessage.textContent = "❌ Password must be at least 6 characters long.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "❌ Password and Confirm Password must match.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+            alert("✅ Correct Password");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Shubham Raj</h2>
+    <h2>22052857</h2>
+    <h2>Password Validation</h2>
+    <form id="validationForm" onsubmit="return onSubmit(event)">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" required>
+
+        <label for="confpass">Confirm Password</label>
+        <input type="password" id="confpass" name="confpass" required>
+
+        <p id="error-message" class="error"></p>
+
+        <input type="submit" value="Validate">
+    </form>
+</body>
+</html>
