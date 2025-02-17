@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open & Close Window</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .open {
+            background-color: #28a745;
+        }
+        .close {
+            background-color: #dc3545;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <script>
+        let newWin;
+
+        function openWindow() {
+            // If window is already open, bring it to focus
+            if (!newWin || newWin.closed) {
+                newWin = window.open('', '', 'width=400,height=200');
+                newWin.document.write('<h1 style="text-align:center; font-family: Arial, sans-serif;">HELLO</h1>');
+            } else {
+                newWin.focus();
+            }
+        }
+
+        function closeWindow() {
+            if (newWin && !newWin.closed) {
+                newWin.close();
+                newWin = null;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Shubham Raj - 22052857</h1>
+    <h2>Open & Close a New Window</h2>
+
+    <button class="open" onclick="openWindow()">Open</button>
+    <button class="close" onclick="closeWindow()">Close</button>
+</body>
+</html>

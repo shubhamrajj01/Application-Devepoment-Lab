@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+        }
+        h2 {
+            margin: 5px 0;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Shubham Raj</h2>
+        <h2>22052857</h2>
+        <h2>Email Validation</h2>
+        <input type="text" id="email" placeholder="Enter your KIIT email">
+        <button onclick="validateEmail()">Validate</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById('email');
+            const messageElement = document.getElementById('message');
+            const email = emailInput.value.trim();
+            const regex = /^[a-zA-Z0-9._%+-]+@kiit\.ac\.in$/;
+            
+            if (!email) {
+                messageElement.textContent = "Email field cannot be empty!";
+                messageElement.className = "error";
+                return;
+            }
+
+            if (!regex.test(email)) {
+                messageElement.textContent = "Invalid email! Please use your KIIT email (@kiit.ac.in).";
+                messageElement.className = "error";
+            } else {
+                messageElement.textContent = "✅ Valid KIIT email!";
+                messageElement.className = "success";
+            }
+        }
+    </script>
+</body>
+</html>

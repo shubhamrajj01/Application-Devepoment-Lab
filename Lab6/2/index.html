@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .back {
+            background-color: #dc3545;
+            color: white;
+        }
+        .forward {
+            background-color: #28a745;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shubham Raj - 22052857</h1>
+    <h2>Navigate Between Pages</h2>
+
+    <button class="back" onclick="goBack()">Go Back</button>
+    <button class="forward" onclick="goForward()">Go Forward</button>
+
+    <p>Click <a href="next.html">here</a> to go to the next page manually.</p>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goForward() {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>
