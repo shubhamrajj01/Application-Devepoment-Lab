@@ -61,6 +61,16 @@
             font-size: 14px;
             color: #777;
         }
+        
+        .profile_picture {
+            width: 150px;
+            height: 150px;
+        }
+
+        .personalInfo {
+            display: flex;
+            justify-content: space-between;
+        }
 
         @media (max-width: 600px) {
             .container {
@@ -82,12 +92,15 @@
         <h1>Shubham Raj</h1>
 
         <h2>Personal Information</h2>
-        <ul>
-            <li><strong>Name:</strong> Shubham Raj</li>
-            <li><strong>Roll Number:</strong> 22052857</li>
-            <li><strong>CGPA:</strong> 8.5</li>
-            <li><strong>Location:</strong> India</li>
-        </ul>
+        <div class="personalInfo">
+            <ul>
+                <li><strong>Name:</strong> Shubham Raj</li>
+                <li><strong>Roll Number:</strong> 22052857</li>
+                <li><strong>CGPA:</strong> 8.5</li>
+                <li><strong>Location:</strong> India</li>
+            </ul>
+            <img src="profile picture.jpg" alt="profile" class="profile_picture">
+        </div>
 
         <h2>Education</h2>
         <ul>
