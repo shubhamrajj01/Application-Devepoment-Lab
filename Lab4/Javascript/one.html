@@ -1,0 +1,28 @@
+<!-- write a js program to display good morning or good noon or good evening on the browser window(use predeined date object) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Greeting(){
+            let currentDate = new Date();
+            let hour = currentDate.getHours();
+            let message ="";
+            if(hour<12){
+                message="Good Morning"
+            } else if(hour >=12 && hour < 16){
+                message="Good Noon"
+            } else {
+                message = "Good evening"
+            }
+            document.write(message)
+        }
+        Greeting()
+    </script>
+</body>
+</html>
