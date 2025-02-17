@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <script>
+        let Principal = parseInt(prompt("Enter the Principal amount: "));
+        let Rate = parseInt(prompt("Enter the Intrest Rate(in %p.a):"));
+        let NumberOfYears = parseInt(prompt("Enter the number of years: "));
+
+        let correct = (confirm(`Your Principal Amount is: ${Principal}. Your Interest rate is: ${Rate}. Your number of Years is: ${NumberOfYears}.`));
+
+        alert(correct)
+
+        if(correct){
+            interst = (Principal*NumberOfYears) * (Rate/100);
+            alert(`Your Interst Rate is: ${interst}`);
+            document.write(`Your Principal Amount is: ${Principal}. Your Interest rate is: ${Rate}. Your number of Years is: ${NumberOfYears}.`);
+            document.write(`Your total Interst on Principal Amount is: ${interst}`)
+        } else {
+            alert("Please enter the correct data")
+        }
+
+    </script>
+</body>
+</html>

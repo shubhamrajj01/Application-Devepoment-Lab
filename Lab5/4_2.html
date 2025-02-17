@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Q4.2</title>
+</head>
+<body>
+    <script>
+        let side1 = parseInt(prompt("Enter the Side1: "));
+        let side2 = parseInt(prompt("Enter the Side2: "));
+        let side3 = parseInt(prompt("Enter the Side3: "));
+
+        let s = (side1+side2+side3)/3;
+        let area = Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+        alert(`The area of the triangle is: ${area}`);
+    </script>
+</body>
+</html>

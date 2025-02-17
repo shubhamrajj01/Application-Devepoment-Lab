@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Q2</title>
+    <script>
+        function Factorial(num){
+            if(num <=1){
+                return num;
+            }
+            return num*Factorial(num-1);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt('Enter the number'));
+        let factorial = Factorial(num);
+        alert(`The factorial of ${num} is: ${factorial}`);
+    </script>
+</body>
+</html>

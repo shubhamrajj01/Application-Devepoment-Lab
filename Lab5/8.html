@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            width: 250px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background: #ddd;
+        }
+        button:hover {
+            background: #bbb;
+        }
+        .clear {
+            grid-column: span 2;
+            background: #ff5c5c;
+            color: white;
+        }
+        .equals {
+            grid-column: span 2;
+            background: #5c85ff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Shubham Raj 22052857</h2>
+        <input type="text" id="display" placeholder="0" readonly>
+        <div class="buttons">
+            <button onclick="getInput('7')">7</button>
+            <button onclick="getInput('8')">8</button>
+            <button onclick="getInput('9')">9</button>
+            <button onclick="getInput('/')">/</button>
+            <button onclick="getInput('4')">4</button>
+            <button onclick="getInput('5')">5</button>
+            <button onclick="getInput('6')">6</button>
+            <button onclick="getInput('*')">*</button>
+            <button onclick="getInput('1')">1</button>
+            <button onclick="getInput('2')">2</button>
+            <button onclick="getInput('3')">3</button>
+            <button onclick="getInput('-')">-</button>
+            <button onclick="getInput('0')">0</button>
+            <button onclick="getInput('.')">.</button>
+            <button onclick="getInput('+')">+</button>
+            <button class="clear" onclick="clearInput()">C</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let input = "";
+        function getInput(value) {
+            input += value;
+            document.getElementById("display").value = input;
+        }
+
+        function calculate() {
+            try {
+                input = eval(input).toString();
+                document.getElementById("display").value = input;
+            } catch {
+                document.getElementById("display").value = "Error";
+            }
+        }
+
+        function clearInput() {
+            input = "";
+            document.getElementById("display").value = "";
+        }
+    </script>
+</body>
+</html>
